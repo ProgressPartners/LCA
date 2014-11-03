@@ -1,0 +1,42 @@
+<div class="jumbotron">
+    <h1><?php echo sprintf($this->translate('Welcome to %sLegal Compliance Assessment%s'), '<span class="zf-green">', '</span>') ?></h1>
+    
+
+</div>
+
+<div class="row">
+
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"><?php echo $this->translate('Log-In') ?></h3>
+            </div>
+            <div class="panel-body">
+                <p><?php echo $this->translate('If you are a normal user, click Checklist on the main menu. If you are an Admin user click Login') ?></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"><?php echo $this->translate('What is LCA ?') ?></h3>
+            </div>
+            <div class="panel-body">
+                <p><?php echo sprintf($this->translate('This is a software framework that allows companies to monitor the status of Compliance with Legal Requirements, laws, rules and regulations. The administrator can add requirements under various laws, that will appear on the dashboard of users, who will update the status from time to time. The Managers can monitor the status and will be able to see summary of Non-Compliances across divisons or the whole company%s.'),  '</a>') ?></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"><?php echo $this->translate('Help &amp; Support') ?></h3>
+            </div>
+            <div class="panel-body">
+                <p><?php echo sprintf($this->translate('If you need any help or support while using this software, please speak first to your System Admin. If the problem is unresolved, you may get in touch with Progress Partners'), '<a href="www.progresspartners.co.in">', '</a>', '<a href="www.progresspartners.co.in">', '</a>') ?></p>
+                <p><a class="btn btn-success pull-right" href="http://www.progresspartners.co.in" target="_blank"><?php echo $this->translate('Progress Partners') ?> &raquo;</a></p>
+            </div>
+        </div>
+    </div>
+</div>

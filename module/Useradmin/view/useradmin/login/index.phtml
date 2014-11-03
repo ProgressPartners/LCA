@@ -1,0 +1,46 @@
+<section class="login">
+     <h2>Login</h2>
+     <?php if ($this->error): ?>
+          <p class="error">
+     	 There were one or more issues with your submission.
+     	 Please correct them as
+     	 indicated below.
+          </p>
+     <?php endif ?>
+     <?php
+     $form = $this->form;
+     $form->prepare();
+     $form->setAttribute('action', $this->url(NULL, array('controller' => 'login', 'action' => 'process')));
+     $form->setAttribute('method', 'post');
+     echo $this->form()->openTag($form);
+     ?>
+     <dl class="zend_form">
+	 <dt><?php echo $this->formLabel($form->get('username')); ?></dt>
+	 <dd><?php
+	      echo $this->formElement($form->get('username'));
+	      echo $this->formElementErrors($form->get('username'));
+	      ?></dd>
+	 <dt><?php echo $this->formLabel($form->get('password'));
+	      ?></dt>
+	 <dd><?php
+	      echo $this->formElement($form->get('password'));
+	      echo $this->formElementErrors($form->get('password'));
+	      ?></dd>
+	 <dt><?php echo $this->formLabel($form->get('server')); ?></dt>
+	 <dd><?php
+	      echo $this->formElement($form->get('server'));
+	      echo $this->formElementErrors($form->get('server'));
+	      ?></dd>
+	 <dt><?php echo $this->formLabel($form->get('database'));
+	      ?></dt>
+	 <dd><?php
+	      echo $this->formElement($form->get('database'));
+	      echo $this->formElementErrors($form->get('database'));
+	      ?></dd>
+	 <dd><?php
+	      echo $this->formElement($form->get('submit'));
+	      echo $this->formElementErrors($form->get('submit'));
+	      ?></dd>
+     </dl>
+     <?php echo $this->form()->closeTag() ?>
+</section>
